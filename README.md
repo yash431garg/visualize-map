@@ -6,14 +6,14 @@ This project extracts, cleans, and visualizes data from the Overture database fo
 
 ## Setup
 
-### Backend
+### Backend (Express)
 
 1. Navigate to the `process-data` directory.
 2. Install dependencies: `npm install`
 3. Process data: `node process_data.js`
 4. Run api: `nodemon data_api.js`
 
-### Frontend
+### Frontend (React Native)
 
 1. Install dependencies in the main file: `npm install`
 2. Start the app: `npx expo start`
