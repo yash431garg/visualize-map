@@ -5,12 +5,14 @@ import ParallaxScrollView from '@/components/ParallaxScrollView';
 import { ThemedText } from '@/components/ThemedText';
 import { ThemedView } from '@/components/ThemedView';
 import TileMap from '@/components/TileMap'
+import MapComponent from '@/components/MapComponent'
 
 
 export default function HomeScreen() {
   return (
 
-    < TileMap />
+    // < TileMap />
+    <MapComponent />
 
   );
 }

@@ -30,13 +30,13 @@ fs.createReadStream('mumbai_map_data.csv')
   .pipe(csv())
   .on('data', (data) => results.push(data))
   .on('end', () => {
-    console.log(results, 'Results');
+    // console.log(results, 'Results');
     // Clean and process data
     const cleanedData = results
       .map((row) => {
         try {
           const [lat, lng] = hexToLatLng(row.geometry);
-          console.log(lat, lng);
+          // console.log(lat, lng);
 
           return {
             id: row.id,
@@ -54,7 +54,7 @@ fs.createReadStream('mumbai_map_data.csv')
       })
       .filter((row) => row !== null); // Remove null rows
 
-    console.log(cleanedData, 'data');
+    // console.log(cleanedData, 'data');
     // Group by H3 index to aggregate points
     const tileMap = cleanedData.reduce((acc, row) => {
       if (!acc[row.h3_index]) {
@@ -70,7 +70,7 @@ fs.createReadStream('mumbai_map_data.csv')
     }, {});
 
     const tileArray = Object.values(tileMap);
-    console.log(tileArray);
+    // console.log(tileArray);
 
     // Save the result
     fs.writeFileSync('dataStore.json', JSON.stringify(tileArray, null, 2));
