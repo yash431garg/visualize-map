@@ -4,7 +4,7 @@
   "description": "",
   "main": "process_data.js",
   "scripts": {
-    "start": "node data_api.js"
+    "start": "nodemon data_api.js"
   },
   "author": "",
   "license": "ISC",

@@ -8,10 +8,18 @@ This project extracts, cleans, and visualizes data from the Overture database fo
 
 ### Backend (Express)
 
+## Process Data
+
 1. Navigate to the `process-data` directory.
 2. Install dependencies: `npm install`
 3. Process data: `node process_data.js`
-4. Run api: `nodemon data_api.js`
+
+
+## Data Api
+
+1. Get Data: https://v-data.vercel.app/tiles
+2. Get tile: https://v-data.vercel.app/tile:id
+3. Delete tile: https://v-data.vercel.app/tile:id
 
 ### Frontend (React Native)
 

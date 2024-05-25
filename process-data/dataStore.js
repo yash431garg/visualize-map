@@ -13,25 +13,31 @@ const writeData = (data) => {
 };
 
 let dataStore = readData();
+// console.log(dataStore)
 
 const getTileData = (h3) => {
-  return dataStore[h3] || [];
+  const data = dataStore.filter(obj => obj.h3_index === h3);
+  return data.length > 0 ? data[0] : [];
 };
 
-const addTileData = (h3, data) => {
-  if (!dataStore[h3]) dataStore[h3] = [];
-  dataStore[h3].push(data);
-  writeData(dataStore);
-};
+
+// const addTileData = (h3, data) => {
+//   if (!dataStore[h3]) dataStore[h3] = [];
+//   dataStore[h3].push(data);
+//   writeData(dataStore);
+// };
 
 const removeTileData = (h3) => {
-  dataStore[h3] = [];
-  writeData(dataStore);
+  const index = dataStore.findIndex(obj => obj.h3_index === h3);
+  console.log(index)
+  if (index !== -1) {
+    dataStore.splice(index, 1);
+    writeData(dataStore);
+  }
 };
 
 module.exports = {
   readData,
   getTileData,
-  addTileData,
   removeTileData,
 };

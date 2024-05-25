@@ -2,7 +2,6 @@ const express = require('express');
 const bodyParser = require('body-parser');
 const {
   getTileData,
-  addTileData,
   removeTileData,
   readData,
 } = require('./dataStore');
@@ -30,12 +29,12 @@ app.get('/tile/:h3', (req, res) => {
 });
 
 // Add data to a tile
-app.post('/tile/:h3', (req, res) => {
-  const h3 = req.params.h3;
-  const data = req.body.data;
-  addTileData(h3, data);
-  res.status(201).send('Data added');
-});
+// app.post('/tile/:h3', (req, res) => {
+//   const h3 = req.params.h3;
+//   const data = req.body.data;
+//   addTileData(h3, data);
+//   res.status(201).send('Data added');
+// });
 
 // Remove data from a tile
 app.delete('/tile/:h3', (req, res) => {
