@@ -1,5 +1,5 @@
  {
     "version": 2,
-    "builds": [{"src": "./process-data/data_api.js", "use": "@vercel/node"}],
-    "routes": [{"src": "/(.*)", "dest": "/"}]
+    "builds": [{"src": "data_api.js", "use": "@vercel/node"}],
+    "routes": [{"src": "/(.*)", "dest": "data_api.js"}]
  }

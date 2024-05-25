@@ -4,7 +4,7 @@
   "description": "",
   "main": "process_data.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "node data_api.js"
   },
   "author": "",
   "license": "ISC",
