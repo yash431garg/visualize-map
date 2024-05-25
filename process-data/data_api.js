@@ -12,6 +12,11 @@ const port = 6000;
 
 app.use(bodyParser.json());
 
+app.get('/', (req, res) => {
+  res.json({ message: 'Hello, world!' });
+});
+
+
 // Get all data
 app.get('/tiles', (req, res) => {
   const allData = readData();
